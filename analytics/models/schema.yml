@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: stg_events
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: user_id
+        tests:
+          - not_null
+          - max_null_rate: {max_rate: 0.01}
+  - name: fct_daily_active_users
+    columns:
+      - name: activity_date
+        tests: [unique, not_null]
+      - name: daily_active_users
+        tests: [not_null]
+  - name: fct_subscription_retention
+    columns:
+      - name: retention_rate
+        tests: [not_null]
+  - name: fct_cohort_ltv
+    columns:
+      - name: cumulative_ltv_per_customer
+        tests: [not_null]

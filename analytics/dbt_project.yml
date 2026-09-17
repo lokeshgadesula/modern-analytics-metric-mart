@@ -1,0 +1,11 @@
+name: metric_mart
+version: "1.0"
+config-version: 2
+profile: metric_mart
+model-paths: ["models"]
+macro-paths: ["macros"]
+models:
+  metric_mart:
+    staging: {+materialized: view}
+    intermediate: {+materialized: view}
+    marts: {+materialized: table}

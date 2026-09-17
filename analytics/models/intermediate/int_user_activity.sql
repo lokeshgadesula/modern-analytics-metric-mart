@@ -1,0 +1,1 @@
+select distinct user_id,activity_date from {{ ref('stg_events') }} where user_id is not null
