@@ -33,4 +33,3 @@ dbt build --project-dir analytics --profiles-dir analytics
 dagster dev -m orchestration.definitions
 ```
 
-Synthetic fixtures/tests are used publicly; no proprietary data or unverifiable production volumes are claimed.
